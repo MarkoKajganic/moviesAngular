@@ -14,23 +14,10 @@
   
     </thead>
   
-    <tr *ngFor="let movie of movies">
-  
-      <td>{{ movie.id }}</td>
-      <td>{{ movie.name }}</td>
-      <td>{{ movie.director }}</td>
-      <td>{{ movie.image }}</td>
-      <td>{{ movie.duration }}</td>
-      <td>{{ movie.releaseDate }}</td>
-      <td>{{ movie.genre }}</td>
- 
-  
-      <td>
-          <button class="btn btn-danger"> X </button>
-      </td>
+    <tr *ngFor="let movie of movies" [movieRow]="movie">
   
     </tr>
   </table>
 
-  
+
   <router-outlet></router-outlet>
