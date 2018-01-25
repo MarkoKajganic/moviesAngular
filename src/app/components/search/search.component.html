@@ -1,3 +1,15 @@
-<p>
-  search works!
-</p>
+
+<form #searchForm="ngForm" (ngSubmit)="search()">
+    <div class="form-group">
+      <label> SEARCH </label>
+      <input #searchTerm="ngModel" [(ngModel)]="searchTerm" name='searchTerm' type="text"
+       class="form-control"  minlength="3">
+      </div>
+       
+        <div *ngIf="searchTerm.errors.minlength">
+          Search must be at least 3 characters long.
+        </div>
+
+        <button type="submit" class="btn btn-primary"> GO </button> 
+
+  </form>
