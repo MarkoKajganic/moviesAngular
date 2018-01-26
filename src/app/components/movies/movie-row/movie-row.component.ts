@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input, EventEmitter, Output, SimpleChange } from '@angular/core';
-import { Movie } from '../../shared/models/movie.model'
+import { Movie } from '../../../shared/models/movie.model'
 
 @Component({
   selector: '[movieRow]',
