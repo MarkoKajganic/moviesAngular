@@ -2,14 +2,13 @@
 <form #searchForm="ngForm" (ngSubmit)="search()">
     <div class="form-group">
       <label> SEARCH </label>
+
       <input #searchTerm1="ngModel" [(ngModel)]="searchTerm" name='searchTerm' type="text"
-       class="form-control"  minlength="3">
+       class="form-control" required minlength="3">
       </div>
        
-        <div *ngIf="searchTerm.errors.minlength">
-          Search must be at least 3 characters long.
-        </div>
 
-        <button type="submit" class="btn btn-primary"> GO </button> 
+        <button type="submit" class="btn btn-primary" 
+        [disabled]="!searchForm.form.valid && searchForm.form.pristine"> SUMBIT </button> 
 
   </form>

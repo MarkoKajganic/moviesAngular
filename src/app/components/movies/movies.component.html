@@ -1,3 +1,4 @@
+<h3>Currently you have selected {{ counter }} movies</h3>
 
 <table class="table table">
 
@@ -14,8 +15,18 @@
       </tr>
   
     </thead>
+
+    <button class="btn btn-primary" (click)="selectedAll = false; selectedAny = false;" (click)="deselectAllCounter()">
+      Reset
+  </button>
+  <button class="btn btn-primary" (click)="selectedAll = true" (click)="selectAllCounter()">
+      Select all
+  </button>
+
   
-    <tr *ngFor="let movie of movies" [movieRow]="movie">
+    <tr (selected)="selected($event)"
+    [selectedAny]="selectedAny" [selectedAll]="selectedAll"
+    *ngFor="let movie of movies" [movieRow]="movie">
   
     </tr>
   </table>

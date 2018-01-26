@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MoviesService} from '../shared/services/movies.service';
+import { MovieRowComponent } from '../components/movies/movie-row/movie-row.component';
 
 
 @NgModule({
@@ -12,10 +13,10 @@ import { MoviesService} from '../shared/services/movies.service';
       MoviesService
   ],
   declarations: [
-
+    MovieRowComponent
   ],
   exports: [
-
+    MovieRowComponent
   ]
 })
 export class SharedModule { }

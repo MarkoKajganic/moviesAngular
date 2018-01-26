@@ -7,7 +7,8 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MoviesComponent } from './components/movies/movies.component';
-import { MovieRowComponent } from './components/movies/movie-row/movie-row.component';
+
+
 
 
 
@@ -16,7 +17,6 @@ import { MovieRowComponent } from './components/movies/movie-row/movie-row.compo
     AppComponent,
     LayoutComponent,
     MoviesComponent,
-    MovieRowComponent,
     
  
   ],
@@ -25,7 +25,6 @@ import { MovieRowComponent } from './components/movies/movie-row/movie-row.compo
     AppRoutingModule,
     SearchModule,
     SharedModule,
-    
     
   ],
   providers: [],

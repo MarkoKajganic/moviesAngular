@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
 import { SearchComponent } from '../components/search/search.component';
+import { SearchPageComponent } from '../components/search/search-page/search-page.component';
 
 
 @NgModule({
@@ -15,7 +16,12 @@ import { SearchComponent } from '../components/search/search.component';
   ],
   declarations: [
     SearchComponent,
+    SearchPageComponent,
     
+  ],
+  exports: [
+    SearchComponent,
+    SearchPageComponent
   ]
 })
 
